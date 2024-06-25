@@ -25,8 +25,12 @@ export const UserProvider = ({ children }) => {
     fetchUsers();
   }, []);
 
+  const addUser = (user) => {
+    setUsers([...users, user]);
+  };
+
   return (
-    <UserContext.Provider value={{ users, loading }}>
+    <UserContext.Provider value={{ users, loading, addUser, setUsers }}>
       {children}
     </UserContext.Provider>
   );

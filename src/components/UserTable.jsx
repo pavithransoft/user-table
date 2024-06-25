@@ -19,9 +19,9 @@ const UserTable = () => {
         </tr>
       </thead>
       <tbody>
-        {users.map((user) => (
+        {users.map((user, index) => (
           <tr key={user.id}>
-            <td>{user.id}</td>
+            <td>{user.id || index + 1}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.username}</td>

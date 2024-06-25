@@ -1,5 +1,6 @@
 import { UserProvider } from "./context/UserContext";
 import UserTable from "./components/UserTable";
+import AddUserForm from "./components/AddUserForm";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <UserProvider>
       <div className="App">
         <h1>User Table</h1>
+        <AddUserForm />
         <UserTable />
       </div>
     </UserProvider>
